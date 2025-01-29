@@ -1,0 +1,911 @@
+/* *{
+    background-color:  gray;
+} */
+
+body {
+    /* display: flex; */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(229, 226, 226);
+    /* display: 80vw;
+   margin:auto; */
+}
+
+#name-tag {
+    text-align: center;
+    background-color: none;
+    transition: transform 0.3s;
+}
+
+#name-tag:hover {
+    transform: scale(1.1);
+}
+
+.header {
+    position: absolute;
+    /* Change to 'fixed' if you want it to stay on scroll */
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Space between search bar & menu */
+}
+
+/* SEArch option */
+.search-container {
+    position: absolute;
+    /* Fixed position (use 'fixed' if you want it to stay on scroll) */
+    top: 15px;
+    /* Distance from the top */
+    right: 50px;
+    /* Distance from the right */
+
+    display: flex;
+    align-items: center;
+    width: 300px;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    background: white;
+    transition: transform 0.2;
+}
+
+.search-container:hover {
+    transform: scale(1.2);
+}
+
+
+.search-container input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    transition: transform 0.2;
+}
+
+.search-container input:hover {
+    transform: scale3d(1.1);
+}
+
+.search-container label {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.search-container label:hover {
+    transform: scale(1.5);
+    background: #0056b3;
+}
+
+/* language button */
+div.language tag {
+    font-family: Arial, sans-serif;
+}
+/* #languagebutton{
+    background-color: red;
+    float: right;
+    margin-top: 10%;
+    margin-right: 5%;
+    margin: 1px;
+    border: 3px;
+    border-radius: 5%;
+    
+} */
+ .language-button{
+    width: 100px;
+    
+
+ }
+.language-button:hover{
+    transform: scale(1.1);
+}
+
+.language-selector {
+    position: relative;
+    display: inline-block;
+}
+
+#languageButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+}
+
+ul.hidden {
+    width: 30px;
+    text-align: center;
+    list-style-type: none;
+}
+
+#languageList {
+    color: black;
+    display: none;
+    /* Hide the dropdown by default */
+    position: absolute;
+    background-color: rgb(110, 104, 104);
+    border: 1px solid #444040;
+    border-radius: 4px;
+    margin-top: 5px;
+    z-index: 1;
+    width: 100%;
+    /* Make the dropdown the same width as the button */
+}
+
+#languageList li {
+    text-transform: capitalize;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#languageList li:hover {
+    background-color: #312727;
+    color: rgb(135, 12, 12);
+    /* Change background on hover */
+}
+
+/* Show the dropdown when the button is clicked */
+#languageList.show {
+    display: block;
+    /* Show the dropdown */
+}
+
+header {
+    background: #0f69ef;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    text-align: center;
+    transition: transform 0.3s;
+
+}
+
+main {
+    padding: 1rem;
+}
+
+@media (max-width: 600px) {
+
+    header,
+    main {
+        padding: 0.5rem;
+    }
+
+}
+
+/* image flex 1 and 2 */
+div.image {
+    display: flex;
+    /* flexing all the images from row to column
+      */
+    overflow: hidden;
+    position: relative;
+    cursor: text;
+
+}
+
+div.image2 {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    cursor: text;
+
+}
+
+.navbar {
+    display: flex;
+    text-align: right;
+}
+
+/* header all like about us ,applyhere,contact us, social */
+header nav div.aboutus {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg, #cea363, #805b04);
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgba(255, 75, 43, 0.6);
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+header nav div.aboutus::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease-in-out;
+}
+
+header nav div.aboutus:hover::before {
+    left: 100%;
+}
+
+header nav div.aboutus:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(247, 84, 52, 0.8);
+}
+
+/* Make the link inside the div stylish */
+header nav div.aboutus a {
+    color: white;
+    text-decoration: none;
+    font-family: "Arial", sans-serif;
+    display: block;
+}
+
+header nav div.aboutus a:hover {
+    text-decoration: underline;
+}
+
+/* header nav div.aboutus {
+box-shadow: 5px 5px 10px #7de704 ;
+border-radius: 50%;
+padding: 10px 20px;
+color:#ffffff;
+background-color: gold;
+
+text-align: center;
+
+cursor: pointer;
+transition: background-color 0.3s ease, transfer 0.2s ease;
+transition:  transform 0.3s;
+
+}
+ header nav div.aboutus:hover{
+transform: scale(1.1);
+}  */
+header nav div.apply {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg, #cea363, #805b04);
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgba(255, 75, 43, 0.6);
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+header nav div.apply::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease-in-out;
+}
+
+header nav div.apply:hover::before {
+    left: 100%;
+}
+
+header nav div.apply:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(247, 84, 52, 0.8);
+}
+
+/* Make the link inside the div stylish */
+header nav div.apply a {
+    color: white;
+    text-decoration: none;
+    font-family: "Arial", sans-serif;
+    display: block;
+}
+
+header nav div.apply a:hover {
+    text-decoration: underline;
+}
+
+
+
+header nav div.contact {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg, #cea363, #805b04);
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgba(255, 75, 43, 0.6);
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+header nav div.contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease-in-out;
+}
+
+header nav div.contact:hover::before {
+    left: 100%;
+}
+
+header nav div.contact:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(247, 84, 52, 0.8);
+}
+
+/* Make the link inside the div stylish */
+header nav div.contact a {
+    color: white;
+    text-decoration: none;
+    font-family: "Arial", sans-serif;
+    display: block;
+}
+
+header nav div.contact a:hover {
+    text-decoration: underline;
+}
+
+header nav div.social {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg, #cea363, #805b04);
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgba(255, 75, 43, 0.6);
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+header nav div.social::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease-in-out;
+}
+
+header nav div.social:hover::before {
+    left: 100%;
+}
+
+header nav div.social:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(247, 84, 52, 0.8);
+}
+
+/* Make the link inside the div stylish */
+header nav div.social a {
+    color: white;
+    text-decoration: none;
+    font-family: "Arial", sans-serif;
+    display: block;
+}
+
+header nav div.social a:hover {
+    text-decoration: underline;
+}
+
+main section div.image div.one img {
+    margin: 5px;
+    background-color: #50d255;
+    cursor: pointer;
+    overflow: hidden;
+    border: 5px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px rgba(red, green, blue, alpha);
+    opacity: 1;
+    transition: transform 0.3s;
+
+}
+
+main section div.color {
+    margin-left: 0;
+    padding: 0;
+    background-color: greenyellow;
+    color: greenyellow;
+}
+
+main section div.image div.one img:hover {
+    transform: scale(1.02);
+}
+
+main section div.image div.one h1 {
+    font: 25px;
+    text-transform: uppercase;
+    transition: transform 0.3s;
+}
+
+main section div.image div.one h1:hover {
+    transform: scale(1.01);
+}
+
+main section div.image div.two img {
+    margin: 5px;
+    background-color: #50d255;
+    cursor: pointer;
+    overflow: hidden;
+    border: 5px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px rgba(red, green, blue, alpha);
+    opacity: 1;
+    transition: transform 0.3s;
+
+}
+
+main section div.image div.two img:hover {
+    transform: scale(1.02);
+}
+
+main section div.image div.two h1 {
+    font: 25px;
+    text-transform: uppercase;
+    transition: transform 0.3s;
+}
+
+main section div.image div.two h1:hover {
+    transform: scale(1.01);
+}
+
+main section div.image div.three img {
+    margin: 5px;
+    background-color: #50d255;
+    cursor: pointer;
+    overflow: hidden;
+    border: 5px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px rgba(red, green, blue, alpha);
+    opacity: 1;
+    transition: transform 0.3s;
+
+}
+
+main section div.image div.three img:hover {
+    transform: scale(1.02);
+}
+
+main section div.image div.three h1 {
+    font: 25px;
+    text-transform: uppercase;
+    transition: transform 0.3s;
+}
+
+main section div.image div.three h1:hover {
+    transform: scale(1.01);
+}
+
+main section div.image div.four img {
+    margin: 5px;
+    background-color: #50d255;
+    cursor: pointer;
+    overflow: hidden;
+    border: 5px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px rgba(red, green, blue, alpha);
+    opacity: 1;
+    transition: transform 0.3s;
+
+}
+
+main section div.image div.four img:hover {
+    transform: scale(1.02);
+}
+
+main section div.image div.four h1 {
+    font: 25px;
+    text-transform: uppercase;
+    transition: transform 0.3s;
+}
+
+main section div.image div.four h1:hover {
+    transform: scale(1.01);
+}
+
+main section div.image div.five img {
+    margin: 5px;
+    background-color: #50d255;
+    cursor: pointer;
+    overflow: hidden;
+    border: 5px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px rgba(red, green, blue, alpha);
+    opacity: 1;
+    transition: transform 0.3s;
+
+}
+
+main section div.image div.five img:hover {
+    transform: scale(1.02);
+}
+
+main section div.image div.five h1 {
+    font: 25px;
+    text-transform: uppercase;
+    transition: transform 0.3s;
+}
+
+main section div.image div.five h1:hover {
+    transform: scale(1.01);
+}
+
+main section div.image2 div.one img {
+    margin: 5px;
+    background-color: #50d255;
+    cursor: pointer;
+    overflow: hidden;
+    border: 5px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px rgba(red, green, blue, alpha);
+    opacity: 1;
+    transition: transform 0.3s;
+
+}
+
+main section div.image2 div.one img:hover {
+    transform: scale(1.02);
+}
+
+main section div.image2 div.one h1 {
+    font: 25px;
+    text-transform: uppercase;
+    transition: transform 0.3s;
+}
+
+main section div.image2 div.one h1:hover {
+    transform: scale(1.01);
+}
+
+main section div.image2 div.two img {
+
+    margin: 5px;
+    background-color: #50d255;
+    cursor: pointer;
+    overflow: hidden;
+    border: 5px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px rgba(red, green, blue, alpha);
+    opacity: 1;
+    transition: transform 0.3s;
+
+}
+
+main section div.image2 div.two img:hover {
+    transform: scale(1.02);
+}
+
+main section div.image2 div.two h1 {
+    font: 25px;
+    text-transform: uppercase;
+    transition: transform 0.3s;
+}
+
+main section div.image2 div.two h1:hover {
+    transform: scale(1.01);
+}
+
+main section div.image2 div.three img {
+    margin: 5px;
+    background-color: #50d255;
+    cursor: pointer;
+    overflow: hidden;
+    border: 5px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px rgba(red, green, blue, alpha);
+    opacity: 1;
+    transition: transform 0.3s;
+
+}
+
+main section div.image2 div.three img:hover {
+    transform: scale(1.02);
+}
+
+main section div.image2 div.three h1 {
+    font: 25px;
+    text-transform: uppercase;
+    transition: transform 0.3s;
+}
+
+main section div.image2 div.three h1:hover {
+    transform: scale(1.01);
+}
+
+main section div.image2 div.four img {
+    margin: 5px;
+    background-color: #50d255;
+    cursor: pointer;
+    overflow: hidden;
+    border: 5px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px rgba(red, green, blue, alpha);
+    opacity: 1;
+    transition: transform 0.3s;
+
+}
+
+main section div.image2 div.four img:hover {
+    transform: scale(1.02);
+}
+
+main section div.image div.four h1 {
+    font: 25px;
+    text-transform: uppercase;
+    transition: transform 0.3s;
+}
+
+main section div.image2 div.four h1:hover {
+    transform: scale(1.01);
+}
+
+main section div.image2 div.five img {
+    margin: 5px;
+    background-color: #50d255;
+    cursor: pointer;
+    overflow: hidden;
+    border: 5px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px rgba(red, green, blue, alpha);
+    opacity: 1;
+    transition: transform 0.3s;
+
+}
+
+main section div.image2 div.five img:hover {
+    transform: scale(1.02);
+}
+
+main section div.image2 div.five h1 {
+    font: 25px;
+    text-transform: uppercase;
+    transition: transform 0.3s;
+}
+
+main section div.image2 div.five h1:hover {
+    transform: scale(1.01);
+}
+
+.head-tag {
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    font: 140px;
+    color: rgb(8, 2, 2);
+}
+
+.image-name {
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    font: 30px;
+
+
+}
+
+img.profile {
+
+    margin-left: 50px;
+    border: none;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+img.profile:hover {
+    
+    border-radius: 10%;
+    transform: scale(1.1);
+
+}
+
+/* img.profile::after{
+    margin-top: 150px;
+    margin-left: 50px;
+    border: 0;
+    border-radius: 0;
+} */
+
+p.information {
+    float: right;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+}
+
+.Information {
+    margin-left: 100px;
+    margin-bottom: 0;
+    margin-top: 150px;
+    max-width: 600px;
+    text-align: justify;
+}
+
+a.about-button {
+    text-transform: capitalize;
+    text-decoration-color: black;
+    text-decoration: navajowhite;
+    /*Remove underline */
+    padding: 10px 15px;
+    border: 1px solid rgb(18, 1, 1);
+    /* Add border to each link */
+    border-radius: 25%;
+    color: rgb(117, 4, 236);
+    /* Text color */
+    transition: 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+a.about-button:hover {
+    transform: scale(1.1);
+    color: whitesmoke;
+    background-color: rgb(47, 45, 45);
+}
+
+ul.buttons {
+    text-align: center;
+    list-style-type: none;
+    margin-left: 400px;
+    margin-top: 0px;
+    display: flex;
+    gap: 10px;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+/* padding-top: 20vh; Adjust based on how you want the content to appear */
+/* } */
+.image-container {
+    display: flex;
+    gap: 20px;
+    align-items: center; /* Align the grid and display area */
+}
+
+/* Fixed display area on the upper right */
+.display-area {
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.display-area img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Image grid (2×3 matrix) */
+.moreimages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.moreimages div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+
+.putinright{
+    position: relative;
+    margin-right: 10px;
+}
+
+.fullform {
+    text-decoration: none;
+}
+
+.center,
+.ddd {
+    display: flex;
+}
+
+.about-me-info {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    text-align: left;
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-left: 5px solid #007bff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.about-me-info b {
+    color: #007bff;
+}
+.Am{
+    text-transform: capitalize;
+    text-decoration: none;
+    font: 20px;
+    border: 0;
+    margin: 0;
+    transition: transform 0.03s;
+}
+.Am:hover{
+    margin: 0;
+  text-transform: uppercase;
+    
+}
+
+footer{
+    text-align: center;
+    font-size: 60px;
+
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.thank-you {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #444;
+    padding: 15px;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+}

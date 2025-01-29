@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog</title>
+    <link rel="stylesheet" href="idea.css">
+</head>
+
+<body>
+    <header>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search...">
+            <label for="search">🔍</label>
+        </div>
+        <div class="language-tag">
+            <div class="language-selector">
+                <button  class="language-button" id="languageButton">English</button>
+                <ul id="languageList" class="hidden">
+                    <li data-lang="English">English</li>
+                    <li data-lang="Spanish">Spanish</li>
+                    <li data-lang="French">French</li>
+                    <li data-lang="German">German</li>
+                    <li data-lang="Chinese">Chinese</li>
+                    <li data-lang="korean">Korean</li>
+                </ul>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const languageButton = document.getElementById('languageButton');
+                    const languageList = document.getElementById('languageList');
+
+                    languageButton.addEventListener('click', function () {
+                        languageList.classList.toggle('show'); // Toggle the dropdown visibility
+                    });
+
+                    // Add event listeners to each language option
+                    const languageItems = languageList.querySelectorAll('li');
+                    languageItems.forEach(item => {
+                        item.addEventListener('click', function () {
+                            const selectedLanguage = this.getAttribute('data-lang');
+                            languageButton.textContent = selectedLanguage; // Update button text
+                            languageList.classList.remove('show'); // Hide the dropdown
+                        });
+                    });
+
+                    // Close the dropdown if clicked outside
+                    window.addEventListener('click', function (event) {
+                        if (!event.target.matches('#languageButton')) {
+                            languageList.classList.remove('show');
+                        }
+                    });
+                });
+            </script>
+        </div>
+        <h1 id="name-tag">Welcome to <span>Travel </span>Blog</h1>
+        <nav class="navbar">
+            <div class="aboutus">
+                <a href="aboutus.html" target="_blank">About Us</a>
+            </div>
+
+
+            <div class="apply">
+                <a href="applyhere.html" target="_blank"> Apply here</a>
+            </div>
+            <br>
+            <div class="contact">
+                <a href="contact.html" target="_blank"> Contact Us</a>
+            </div>
+            <br>
+            <div class="social">
+                <a href="social.html" target="_blank"> social media handles</a>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <section>
+            <h2 class="head-tag">Recent Destinations</h2>
+
+
+
+
+            <div class="image">
+                <div class="one">
+                    <img src="mountainbgc.jpeg" alt="himalyas" height="300px" width="350px">
+                    <div>
+                        <h1 class="image-name">Himalyas</h1>
+                    </div>
+                    <h4> The Himalayas, or Himalaya is a moun.. <!--tain range in Asia, separating the
+                             plains of the Indian subcontinent from the Tibetan Plateau. The range has 
+                   several peaks exceeding an elevation of 8,000 m (26,000 ft) including -->
+                        <a href="himalya.html" target="_blank"> See more </a>
+                    </h4>
+                </div>
+                <br>
+                <hr>
+                <div class="two">
+                    <img src="tripadvisor.jpeg" alt="tripadvisor" height="300px" width="350px">
+                    <h1 class="image-name">Tripadvisor Temple</h1>
+                    <h4>
+                        <a href="https://www.google.com" target="_blank"> See more </a>
+                    </h4>
+                </div>
+                <br>
+                <hr>
+                <div class="three">
+                    <img src="clubmahindra.jpeg" alt="clubmahindra" height="300px" width="350px">
+                    <h1 class="image-name">Clubmahindra</h1>
+                    <h4>
+                        <a href="https://www.google.com" target="_blank"> See more </a>
+                    </h4>
+                </div>
+                <br>
+                <hr>
+                <div class="four">
+                    <img src="JCRcabs.jpeg" alt="JCRcabs" height="300px" width="350px">
+                    <h1 class="image-name">JCRcabs</h1>
+                    <h4>
+                        <a href="https://www.google.com" target="_blank"> See more </a>
+                    </h4>
+                </div>
+                <br>
+                <hr>
+                <div class="five">
+                    <img src="Urban Jaipur.jpeg" alt="Urban Jaipur" height="300px" width="350px">
+                    <h1 class="image-name">Urban Jaipur</h1>
+                    <h4>
+                        <a href="https://www.google.com" target="_blank"> See more </a>
+                    </h4>
+                </div>
+                <br>
+                <hr>
+            </div>
+            <div class="color">
+                <h1>hii</h1>
+            </div>
+            <div class="image2">
+                <div class="one">
+                    <img src="jalmahal-1.jpeg" alt="Jal mahal" height="300px" width="350px">
+                    <h1 class="image-name">Jal Mahala</h1>
+                    <h4>My aunt's son, my uncle's son, and I .... <!--  to Jalmahal in Narnaul to explore.  -->
+                        <a href="jalmahal.html" target="_blank"> See more </a>
+                    </h4>
+                </div>
+                <br>
+                <hr>
+                <div class="two">
+                    <img src="khusrobag.jpeg" alt="khusrobag" height="300px" width="350px">
+                    <h1 class="image-name">Khusro Bag Prayagraj</h1>
+                    <h4> Me and my college friends went to.... <!--Khusro Bag. we went in the evening....-->
+                        <a href="idea_khusrobag.html" target="_blank"> See more </a>
+                    </h4>
+                </div>
+                <br>
+                <hr>
+                <div class="three">
+                    <img src="shyam-gate.jpg" alt="shyam-gate" height="300px" width="350px">
+                    <h1 class="image-name">Khatu Shyam</h1>
+                    <h4>
+                        <a href="khatushyam.html" target="_blank"> See more </a>
+                    </h4>
+                </div>
+                <br>
+                <hr>
+                <div class="four">
+                    <img src="JCRcabs.jpeg" alt="JCRcabs" height="300px" width="350px">
+                    <h1>JCRcabs</h1>
+                    <h4>
+                        <a href="https://www.google.com" target="_blank"> See more </a>
+                    </h4>
+                </div>
+                <br>
+                <hr>
+                <div class="five">
+                    <img src="Urban Jaipur.jpeg" alt="Urban Jaipur" height="300px" width="350px">
+                    <h1 class="image-name">Urban Jaipur</h1>
+                    <h4>
+                        <a href="https://www.google.com" target="_blank"> See more </a>
+                    </h4>
+                </div>
+                <br>
+                <hr>
+            </div>
+        </section>
+
+
+        <section class="travlerinfo">
+            <div>
+                    <h2 class="head-tag">About Us</h2>
+            </div>
+<section class="about-us">  <div class="profile-container"><img class="profile" src="image-circle.jpg" alt="My Image" width="250"
+    height="250">
+
+
+<p class="Information">Hello,There. Myself Sahil Saini,a student pursuing an undergraduate degree
+    from <abbr  class="fullform" title="Indian Institute of Information Technology">IIIT</abbr>
+    Allahabad,<abbr class="fullform" title="Uttar Pradesh">UP</abbr>. I am passionate about
+    the softwares.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum hic suscipit ad libero nobis magnam vitae.
+    Inventore corporis dolorem deserunt consectetur ullam fugit modi a esse. Animi dolores ea quam soluta!
+    Soluta exercitationem laboriosam voluptas non! Dolorem ex distinctio cumque, blanditiis quo beatae delectus?
+</p>
+</div>
+<br>
+<div>
+<ul class="buttons">
+    <li>
+        <a class="about-button" href="www.instagram.com\@sahil7.05">instagram</a>
+    </li>
+    <br>
+    <li>
+        <a class="about-button" href="www.google.com">Google</a>
+    </li>
+    <br>
+    <li>
+        <a class="about-button" href="www.linkedin.com">LinkedIn</a>
+    </li>
+    <br>
+    <li>
+        <a class="about-button" href="www.github.com">Github</a>
+    </li>
+</ul>
+</div>
+
+
+
+<h3 class="Am">About Me</h3>
+<div>
+    <div class="about-me-info">
+        <p>👋 <b>Hi, I'm Sahil Saini!</b> I am a <b>1st-year BTech student at IIITA</b>, passionate about coding, problem-solving, and exploring new technologies.</p>
+    
+        <p>💻 <b>Competitive Programming Enthusiast:</b> I actively practice coding on platforms like <b>Codeforces, CodeChef, and LeetCode</b>, constantly improving my problem-solving skills.</p>
+    
+        <p>🌐 <b>Web Development & DSA Learner:</b> Currently, I am learning <b>Web Development</b> and <b>Data Structures & Algorithms (DSA)</b> to build a strong foundation in software development.</p>
+    
+        <p>📚 <b>Academic Excellence:</b> In my school years, I was a <b>topper in Math and Science</b>, which helped develop my analytical and logical thinking.</p>
+    
+        <p>✈️ <b>Passionate Traveler:</b> I love <b>traveling</b> and aspire to explore different places, cultures, and experiences throughout my life.</p>
+    
+        <p>🚀 <b>Looking Forward To...</b> Learning, growing as a developer, traveling the world, and enjoying life to the fullest!</p>
+    </div>
+</div>
+    
+
+<div id="ddd">
+<ul>
+    <li>19</li>
+    <li>5+</li>
+    <li>4</li>
+</ul>
+</div>
+<div id="center">
+<ul>
+    <li>
+        <h2>years old</h2>
+    </li>
+    <li>
+        <h2>years of coding</h2>
+    </li>
+    <li>
+        <h2>Members in family</h2>
+    </li>
+</ul>
+</div> </section>
+
+        </section>
+
+    </main>
+</body>
+
+</html>
